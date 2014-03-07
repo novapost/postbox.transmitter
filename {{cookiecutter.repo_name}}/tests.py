@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Tests."""
 from django.test import TestCase
-from forms.{{ channel_code }} import SubscriptionForm
+from forms.{{ cookiecutter.channel_code }} import SubscriptionForm
 
 
-class {{ transmitter_code }}Test(TestCase):
+class {{ cookiecutter.repo_name }}Test(TestCase):
     def test_render_as_p(self):
         form = SubscriptionForm()
         self.assertIsInstance(form.as_p(), unicode)

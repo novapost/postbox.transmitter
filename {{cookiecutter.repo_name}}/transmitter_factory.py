@@ -8,10 +8,10 @@ class TransmitterFactory(factory.DjangoModelFactory):
     FACTORY_FOR = Transmitter
     FACTORY_DJANGO_GET_OR_CREATE = ("code", )
 
-    code = u"{{ transmitter_code }}"
+    code = u"{{ cookiecutter.repo_name }}"
     uuid = u""
-    slug = u"{{ transmitter_code }}"
-    name = u"{{ transmitter_code }}"
+    slug = u"{{ cookiecutter.repo_name }}"
+    name = u"{{ cookiecutter.repo_name }}"
     ads = u""
 
 
@@ -36,10 +36,10 @@ class ChannelFactory(factory.DjangoModelFactory):
 
     transmitter = factory.SubFactory(TransmitterFactory)
     category = factory.SubFactory(CategoryFactory)
-    code = u"all"
+    code = u"{{ cookiecutter.channel_code }}"
     uuid = u""
-    title = u"Documents"
-    slug = u"documents"
+    title = u"{{ cookiecutter.channel_code }}"
+    slug = u"{{ cookiecutter.channel_code }}"
 
     summary = u""
 
